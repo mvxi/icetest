@@ -1,0 +1,3 @@
+nohup icebox --IceBox.Service.mmmm=HelloWorld:create --mmmm.Endpoints="tcp -p 10001" > test.log 2>&1 &
+#nohup icebox --IceBox.Service.mmmm=HelloWorld:create --mmmm.Endpoints="tcp -p 10001"  --IceBox.Service.nnnn=HelloWorld:create --nnnn.Endpoints="tcp -p 10002" > test.log 2>&1 &
+#mmmm 是ObjectAdapter的名称

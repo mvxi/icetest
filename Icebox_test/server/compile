@@ -1,0 +1,1 @@
+g++ -fPIC --shared -I/opt/Ice-3.3/include/ -I../slice/ -I. -L/opt/Ice-3.3/lib -lIce -lIceUtil -lIceBox HelloI.cpp HelloServiceI.cpp ../slice/Hello.cpp -o libHelloWorld.so

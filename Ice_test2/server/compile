@@ -1,0 +1,1 @@
+g++ ../slice/Printer.cpp ../slice/TimeZone.cpp Server.cpp -I. -I$ICE_HOME/include -I../slice -L$ICE_HOME/lib -lIce -lIceUtil -o server

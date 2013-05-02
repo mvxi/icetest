@@ -1,0 +1,13 @@
+g++ -fPIC --shared -I/opt/Ice-3.3/include/ -I. -L/opt/Ice-3.3/lib -lIce -lIceUtil -lIceBox HelloI.cpp HelloServiceI.cpp Hello.cpp -o liba.so
+
+//server 编译
+g++ -fPIC -I. -I$ICE_HOME/include -c Hello.cpp HelloI.cpp HelloServiceI.cpp
+g++ --shared -o libHelloService.so -L. -L$ICE_HOME/lib -lIce -lIceUtil Hello.o HelloI.o HelloServiceI.o
+LD_LIBRARY_PATH=$ICE_HOME/lib:.
+export LD_LIBRARY_PATH
+icebox --IceBox.Service.Hello=HelloService:create --Hello.Endpoints="tcp -p 10001"
+
+
+//client 编译
+g++ -c client.cpp -I$ICE_HOME/include -I.
+g++ -o client.out -L$ICE_HOME/lib -lIce -lIceUtil client.o Hello.o

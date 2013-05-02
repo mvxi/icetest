@@ -1,0 +1,1 @@
+g++ ../slice/Hello.cpp client.cpp -I$ICE_HOME/include -I../slice -I. -L$ICE_HOME/lib -lIce -lIceUtil -o client

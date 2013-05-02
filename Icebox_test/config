@@ -1,0 +1,3 @@
+IceBox.Service.Hello=HelloService:create
+Hello.Endpoints=tcp -p 10001
+

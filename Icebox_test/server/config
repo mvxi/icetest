@@ -1,0 +1,3 @@
+IceBox.Service.dodo=HelloWorld:create
+dodo.Endpoints=tcp -p 10001
+
